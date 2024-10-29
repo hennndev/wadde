@@ -3,19 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brand-primary: #F15757;
+  --yellow-primary: #F88E12;
+  --black-secondary: rgba(0, 0, 0, 0.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+@layer components {
+  .container {
+    @apply max-w-[1440px] mx-auto
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  .flexx {
+    @apply flex items-center
+  }
+  .flex-center {
+    @apply flex items-center justify-center
+  }
+  .flex-between {
+    @apply flex items-center justify-between
+  }
+  .flex-evenly {
+    @apply flex items-center justify-evenly
+  }
 }
